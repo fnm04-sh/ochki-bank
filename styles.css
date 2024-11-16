@@ -143,20 +143,65 @@ a:hover {
     font-size: 18px;
 }
 
-/* Ссылки */
-a {
-    color: #ffbf00;
-    text-decoration: none;
+/* Кнопки */
+button {
+    background-color: #ffbf00; /* Золотистый */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Эффект при наведении на кнопку */
+button:hover {
+    background-color: #ff8c00; /* Немного более тёмный оттенок */
+    transform: scale(1.1); /* Увеличение кнопки */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для 3D-эффекта */
+}
+
+/* Эффект при нажатии */
+button:active {
+    transform: scale(1.05); /* Уменьшение при нажатии */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Глубокая тень при нажатии */
+}
+
+/* Иконки */
+.icon {
+    font-size: 40px; /* Размер иконки */
+    color: #fff; /* Белый цвет */
+    transition: all 0.3s ease; /* Плавные переходы */
+    cursor: pointer;
+}
+
+/* Эффект при наведении на иконку */
+.icon:hover {
+    color: #ffbf00; /* Изменение цвета на золотистый */
+    transform: scale(1.2) rotate(15deg); /* Увеличение и вращение */
+}
+
+/* Эффект при нажатии на иконку */
+.icon:active {
+    transform: scale(1.1) rotate(0); /* Уменьшение и сброс вращения */
+    color: #ff8c00; /* Тёмный цвет при нажатии */
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    color: #fff;
 }
 
 /* Анимации */
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInCards {
@@ -165,21 +210,6 @@ a:hover {
 }
 
 @keyframes slideUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Подвал */
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    animation: fadeIn 3s ease-in-out;
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
