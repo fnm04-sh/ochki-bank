@@ -1,7 +1,8 @@
-// Скрипт для плавных анимаций при переходе по вкладкам
-document.addEventListener("DOMContentLoaded", function() {
-    const servicesSection = document.getElementById("services");
-    
-    // Добавляем плавный переход при загрузке
-    servicesSection.classList.add("fadeIn");
+// Пример JavaScript для дополнительной функциональности, если нужно добавить интерактивность
+document.addEventListener('DOMContentLoaded', () => {
+    // Пример: кнопка перехода к услугам с анимацией
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
+    });
 });
