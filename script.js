@@ -11,3 +11,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, index * 500);  // Задержка для плавного появления
     });
 });
+ 
