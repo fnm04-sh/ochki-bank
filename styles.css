@@ -1,47 +1,35 @@
-/* Общие стили */
+/* Основные стили */
 body {
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: #1c1c1c;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h1, p {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 40px;
+/* Главная секция */
+.home {
     text-align: center;
+    padding: 100px 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .main-title span {
-    color: #1e90ff; /* Цвет для выделения "Очки Банк" */
+    color: #1e90ff;
 }
 
 .main-description {
     font-size: 1.2rem;
-    text-align: center;
     margin-top: 10px;
-    font-weight: 400;
 }
 
-/* Секция с информацией о банке */
+/* Секция информации */
 .info {
-    background: #2e2e2e;
-    padding: 40px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -49,32 +37,20 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .info-box {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.info-box h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.info-box p {
-    font-size: 1rem;
-}
-
-/* Секция с отзывами */
+/* Секция отзывов */
 .reviews {
-    background-color: #2e2e2e;
-    padding: 40px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -83,99 +59,53 @@ h1 {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .review-box {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    text-align: center;
     padding: 20px;
+    width: 300px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
 }
 
 .review-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.review-text {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    font-size: 16px;
-}
-
-.review-text p:first-child {
-    font-style: italic;
-    font-weight: bold;
-}
-
-.review-text p:last-child {
-    font-size: 14px;
-    color: #ddd;
-}
-
-/* Секция с контактами */
+/* Секция контактов */
 .contacts {
-    padding: 40px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .contact-box {
     max-width: 300px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .contact-img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-/* Секция с услугами */
-.services {
-    padding: 40px 0;
-    background: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.service-box {
-    background-color: #444;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 20px;
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.service-box h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.service-box p {
-    font-size: 1rem;
-}
-
-.service-box a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Анимация появления */
+/* Анимации */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
