@@ -1,7 +1,7 @@
-// Пример для добавления интерактивности в будущем
-
-// Пример функции для динамического отображения или добавления контента
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Страница загружена!');
-    // Здесь можно добавить динамическое поведение, например, анимации или обновление контента
+// Скрипт для плавных анимаций при переходе по вкладкам
+document.addEventListener("DOMContentLoaded", function() {
+    const servicesSection = document.getElementById("services");
+    
+    // Добавляем плавный переход при загрузке
+    servicesSection.classList.add("fadeIn");
 });
