@@ -1,20 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        },
-        { threshold: 0.2 }
-    );
-
-    sections.forEach((section) => {
-        observer.observe(section);
+    // Пример: кнопка перехода к услугам с анимацией
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
     });
 });
- 
