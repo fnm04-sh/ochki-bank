@@ -70,6 +70,8 @@ a {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    -webkit-backdrop-filter: blur(10px); /* Для поддержки старых браузеров */
 }
 
 .card h3 {
