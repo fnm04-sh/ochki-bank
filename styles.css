@@ -1,25 +1,29 @@
-/* Основные стили */
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif; /* Для классического шрифта */
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #000000, #1e2a47); /* Черно-синий градиент */
-    color: white;
-    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+    background: linear-gradient(135deg, #1a1a1a, #3e4a7e); /* Градиент темный */
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
-    padding: 20px;
+    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8); /* Мрачный фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Garamond', serif; /* Классический шрифт для логотипа */
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -35,31 +39,41 @@ nav ul li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #ffbf00; /* Золотистый для акцентов */
     font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffbf00; /* Добавим акцент при наведении */
 }
 
 /* Главная секция */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    margin: 20px auto;
+    margin: 30px auto;
     width: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 50px;
     animation: fadeIn 2s ease-in-out;
+    font-family: 'Georgia', serif; /* Классический шрифт для заголовков */
+    letter-spacing: 3px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 24px;
     animation: fadeIn 3s ease-in-out;
+    margin-top: 20px;
 }
 
-/* Секция с информацией о банке */
+/* Карточки с информацией */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -71,11 +85,11 @@ a {
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px); /* Эффект размытия фона */
-    -webkit-backdrop-filter: blur(10px); /* Для поддержки старых браузеров */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transform: translateY(50px);
     opacity: 0;
     animation: slideUp 1s forwards;
@@ -91,6 +105,8 @@ a {
     font-size: 36px;
     margin-bottom: 40px;
     animation: fadeIn 2s ease-in-out;
+    font-family: 'Georgia', serif; /* Элегантный шрифт */
+    letter-spacing: 2px;
 }
 
 .service-cards {
@@ -104,11 +120,11 @@ a {
 .service-card {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px); /* Эффект размытия фона */
-    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transform: translateY(50px);
     opacity: 0;
     animation: slideUp 1s forwards;
@@ -117,6 +133,7 @@ a {
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Georgia', serif;
 }
 
 .service-info p {
