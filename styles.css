@@ -1,226 +1,175 @@
-/* Подключение шрифтов из Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap');
-
 /* Общие стили */
 body {
-    font-family: 'Roboto', sans-serif; /* Современный и удобочитаемый шрифт */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1a1a1a, #3e4a7e); /* Градиент темный */
+    background: #1c1c1c;
     color: #fff;
-    line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* Header */
-header {
-    padding: 30px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Мрачный фон */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header .logo {
-    font-size: 28px;
-    font-family: 'Montserrat', sans-serif; /* Современный шрифт для логотипа */
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style-type: none;
+h1, p {
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: #ffbf00; /* Золотистый для акцентов */
-    font-weight: bold;
-    font-size: 18px;
-}
-
-a:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #ffbf00; /* Добавим акцент при наведении */
-}
-
-/* Главная секция */
-.hero {
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 40px;
     text-align: center;
-    padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
-    margin: 30px auto;
-    width: 80%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.hero h1 {
-    font-size: 50px;
-    animation: fadeIn 2s ease-in-out;
-    font-family: 'Montserrat', sans-serif; /* Современный шрифт для заголовков */
-    letter-spacing: 2px;
+.main-title span {
+    color: #1e90ff; /* Цвет для выделения "Очки Банк" */
 }
 
-.hero p {
-    font-size: 24px;
-    animation: fadeIn 3s ease-in-out;
-    margin-top: 20px;
+.main-description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
 }
 
-/* Карточки с информацией */
-.info-cards {
+/* Секция с информацией о банке */
+.info {
+    background: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.info-boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 40px 20px;
-    animation: fadeInCards 2s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.1);
+.info-box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slideUp 1s forwards;
+}
+
+.info-box h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.info-box p {
+    font-size: 1rem;
+}
+
+/* Секция с отзывами */
+.reviews {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.review-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+
+.review-text p:first-child {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.review-text p:last-child {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Секция с контактами */
+.contacts {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 /* Секция с услугами */
 .services {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    animation: fadeIn 2s ease-in-out;
-    font-family: 'Montserrat', sans-serif; /* Современный шрифт */
-    letter-spacing: 2px;
-}
-
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 40px;
-    animation: fadeInCards 2s ease-in-out;
-}
-
-.service-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slideUp 1s forwards;
-}
-
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.service-info p {
-    font-size: 18px;
-}
-
-/* Кнопки */
-button {
-    background-color: #ffbf00; /* Золотистый */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-}
-
-/* Эффект при наведении на кнопку */
-button:hover {
-    background-color: #ff8c00; /* Немного более тёмный оттенок */
-    transform: scale(1.1); /* Увеличение кнопки */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
-}
-
-/* Секция с контактами */
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 400px; /* Высота секции */
-    background-color: rgba(0, 0, 0, 0.6); /* Прозрачный черный фон */
-    margin-top: 40px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Контент секции с контактами */
-.contact-content {
-    text-align: center;
-    color: white;
-}
-
-/* Аватарка */
-.avatar {
-    width: 120px; /* Размер аватарки */
-    height: 120px;
-    border-radius: 50%; /* Скругление аватарки */
-    object-fit: cover; /* Обеспечивает правильное обрезание изображения */
-    margin-bottom: 20px; /* Отступ снизу */
-}
-
-/* Никнейм */
-.nickname {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-}
-
-/* Подвал */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
-    font-size: 14px;
+    padding: 40px 0;
+    background: #333;
     color: #fff;
+    text-align: center;
 }
 
-/* Анимации */
+.service-box {
+    background-color: #444;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.service-box h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.service-box p {
+    font-size: 1rem;
+}
+
+/* Анимация появления */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(50px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInCards {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-    0% { transform: translateY(50px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
 }
