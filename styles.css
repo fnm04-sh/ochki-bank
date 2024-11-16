@@ -1,6 +1,9 @@
+/* Подключение шрифтов из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 /* Общие стили */
 body {
-    font-family: 'Georgia', serif; /* Для классического шрифта */
+    font-family: 'Open Sans', sans-serif; /* Современный и удобочитаемый шрифт */
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #1a1a1a, #3e4a7e); /* Градиент темный */
@@ -21,7 +24,7 @@ header {
 
 header .logo {
     font-size: 28px;
-    font-family: 'Garamond', serif; /* Классический шрифт для логотипа */
+    font-family: 'Playfair Display', serif; /* Классический шрифт для логотипа */
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -63,7 +66,7 @@ a:hover {
 .hero h1 {
     font-size: 50px;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Georgia', serif; /* Классический шрифт для заголовков */
+    font-family: 'Playfair Display', serif; /* Элегантный шрифт для заголовков */
     letter-spacing: 3px;
 }
 
@@ -105,7 +108,7 @@ a:hover {
     font-size: 36px;
     margin-bottom: 40px;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Georgia', serif; /* Элегантный шрифт */
+    font-family: 'Playfair Display', serif; /* Элегантный шрифт */
     letter-spacing: 2px;
 }
 
@@ -133,7 +136,7 @@ a:hover {
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .service-info p {
