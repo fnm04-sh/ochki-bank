@@ -1,9 +1,6 @@
-// Пример JavaScript для интерактивных анимаций или взаимодействия с элементами
-
-// Например, можно добавить анимацию плавного появления секций при прокрутке
 document.addEventListener('DOMContentLoaded', () => {
+    // Отзывы плавно появляются при прокрутке
     const reviews = document.querySelectorAll('.review-box');
-
     reviews.forEach((review, index) => {
         setTimeout(() => {
             review.style.opacity = '1';
@@ -11,4 +8,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, index * 500);  // Задержка для плавного появления
     });
 });
- 
