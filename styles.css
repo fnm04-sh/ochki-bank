@@ -5,7 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #000000, #1e2a47); /* Черно-синий градиент */
     color: white;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
 }
 
 /* Header */
@@ -57,6 +57,28 @@ a {
 .hero p {
     font-size: 20px;
     animation: fadeIn 3s ease-in-out;
+}
+
+/* Секция с информацией о банке */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+    animation: fadeInCards 2s ease-in-out;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    -webkit-backdrop-filter: blur(10px); /* Для поддержки старых браузеров */
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
 }
 
 /* Секция с услугами */
