@@ -4,77 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Очки Банк</title>
-    <!-- Подключение Google Fonts и Font Awesome для иконок -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Очки Банк</div>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <!-- Главная секция -->
-    <section class="hero">
-        <h1>Добро пожаловать в Очки Банк</h1>
-        <p>Мы предоставляем лучшие финансовые решения для вашего комфорта и безопасности.</p>
-        <button>Перейти к услугам</button>
+    <section id="home" class="home">
+        <div class="container">
+            <h1 class="main-title">Добро пожаловать в <span>Очки Банк</span></h1>
+            <p class="main-description">Надежный, современный и удобный банк для вас.</p>
+        </div>
     </section>
 
-    <!-- Секция с информацией -->
-    <section class="info-cards">
-        <div class="card">Дата основания: 2024 год</div>
-        <div class="card">Владелец: fnm04.sh</div>
-        <div class="card">Филиалы: Пока нет</div>
-        <div class="card">Сервисы: Международные переводы</div>
-        <div class="card">Награды: Лучшая криптовалюта Польши</div>
-        <div class="card">Финансовые решения: Переводы денег</div>
+    <!-- Секция с информацией о банке -->
+    <section id="info" class="info">
+        <div class="info-boxes">
+            <div class="info-box">
+                <h2>Дата основания</h2>
+                <p>2024 год</p>
+            </div>
+            <div class="info-box">
+                <h2>Владелец</h2>
+                <p>fnm04.sh</p>
+            </div>
+            <div class="info-box">
+                <h2>Филиалы</h2>
+                <p>Пока нет</p>
+            </div>
+            <div class="info-box">
+                <h2>Сервисы</h2>
+                <p>Международные переводы</p>
+            </div>
+            <div class="info-box">
+                <h2>Награды</h2>
+                <p>Лучшая криптовалюта Польши</p>
+            </div>
+            <div class="info-box">
+                <h2>Финансовые решения</h2>
+                <p>Переводы денег</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Секция с услугами -->
-    <section id="services" class="services">
-        <h2>Наши Услуги</h2>
-        <div class="service-cards">
-            <div class="service-card">
-                <h3>Взять кредит</h3>
-                <p>Процентная ставка: 10% годовых, срок: до 5 лет.</p>
+    <!-- Секция с отзывами -->
+    <section id="reviews" class="reviews">
+        <div class="review-container">
+            <div class="review-box">
+                <img src="otziw1.jpg" alt="Отзыв 1" class="review-img">
+                <div class="review-text">
+                    <p>"Отличный банк, всегда быстро и удобно! Рекомендую всем!"</p>
+                    <p>- Иван Иванов</p>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Оформление карты</h3>
-                <p>Услуга будет доступна в будущем.</p>
-            </div>
-            <div class="service-card">
-                <h3>Банковские переводы</h3>
-                <p><a href="https://ochki-pay.vercel.app/" target="_blank">Переход по этой ссылке</a></p>
-            </div>
-            <div class="service-card">
-                <h3>Оформление криптокарты</h3>
-                <p>Услуга будет доступна в будущем.</p>
+            <div class="review-box">
+                <img src="otziw2.jpg" alt="Отзыв 2" class="review-img">
+                <div class="review-text">
+                    <p>"Прекрасный сервис и удобное мобильное приложение! Все на высшем уровне."</p>
+                    <p>- Мария Петрова</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Секция с контактами -->
-    <section id="contact" class="contact">
-        <div class="contact-content">
-            <img src="avatar.jpg" alt="Avatar" class="avatar">
-            <p class="nickname">@fnm04_sh</p>
+    <section id="contacts" class="contacts">
+        <div class="contact-box">
+            <img src="avatar.jpg" alt="Аватар" class="contact-img">
+            <h2>@fnm04_sh</h2>
         </div>
     </section>
 
-    <!-- Подвал -->
-    <footer>
-        <p>&copy; 2024 Очки Банк. Все права защищены.</p>
-    </footer>
+    <!-- Секция с услугами -->
+    <section id="services" class="services">
+        <div class="service-box">
+            <h3>Взять кредит</h3>
+            <p>Процентная ставка: 7% годовых. Срок: до 5 лет.</p>
+        </div>
+        <div class="service-box">
+            <h3>Оформление карты</h3>
+            <p>Пока не доступно, но будет в будущем.</p>
+        </div>
+        <div class="service-box">
+            <h3>Банковские переводы</h3>
+            <a href="https://ochki-pay.vercel.app/" target="_blank">Переход по этой ссылке</a>
+        </div>
+        <div class="service-box">
+            <h3>Оформление криптокарты</h3>
+            <p>Пока не доступно.</p>
+        </div>
+    </section>
 
+    <!-- Подключение скриптов -->
     <script src="script.js"></script>
 </body>
 </html>
