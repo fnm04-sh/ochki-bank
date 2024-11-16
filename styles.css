@@ -1,112 +1,226 @@
-/* Основные стили */
+/* Подключение шрифтов из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap');
+
+/* Общие стили */
 body {
+    font-family: 'Roboto', sans-serif; /* Современный и удобочитаемый шрифт */
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #000428, #004e92);
+    background: linear-gradient(135deg, #1a1a1a, #3e4a7e); /* Градиент темный */
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Навигация */
+/* Header */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar {
+    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Мрачный фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1e90ff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
+header .logo {
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт для логотипа */
     font-weight: 600;
-    transition: color 0.3s ease;
+    letter-spacing: 1px;
 }
 
-.nav-links li a:hover {
-    color: #1e90ff;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-/* Секции */
-section {
+nav ul li {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffbf00; /* Золотистый для акцентов */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffbf00; /* Добавим акцент при наведении */
+}
+
+/* Главная секция */
+.hero {
+    text-align: center;
     padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+    font-size: 50px;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт для заголовков */
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 24px;
+    animation: fadeIn 3s ease-in-out;
+    margin-top: 20px;
+}
+
+/* Карточки с информацией */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+    animation: fadeInCards 2s ease-in-out;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+/* Секция с услугами */
+.services {
+    padding: 40px 20px;
     text-align: center;
 }
 
-.info-boxes {
-    display: flex;
-    flex-wrap: wrap;
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт */
+    letter-spacing: 2px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    justify-content: center;
+    margin-top: 40px;
+    animation: fadeInCards 2s ease-in-out;
 }
 
-.info-box, .service-box, .contact-box {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+.service-card {
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-info p {
+    font-size: 18px;
+}
+
+/* Кнопки */
+button {
+    background-color: #ffbf00; /* Золотистый */
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-.info-box:hover, .service-box:hover, .contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+/* Эффект при наведении на кнопку */
+button:hover {
+    background-color: #ff8c00; /* Немного более тёмный оттенок */
+    transform: scale(1.1); /* Увеличение кнопки */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
 }
 
-/* Контакты */
-.contact-box {
-    max-width: 300px;
-    margin: 0 auto;
+/* Секция с контактами */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px; /* Высота секции */
+    background-color: rgba(0, 0, 0, 0.6); /* Прозрачный черный фон */
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
-.contact-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+/* Контент секции с контактами */
+.contact-content {
+    text-align: center;
+    color: white;
+}
+
+/* Аватарка */
+.avatar {
+    width: 120px; /* Размер аватарки */
+    height: 120px;
+    border-radius: 50%; /* Скругление аватарки */
+    object-fit: cover; /* Обеспечивает правильное обрезание изображения */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Никнейм */
+.nickname {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    color: #fff;
 }
 
 /* Анимации */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-section {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeIn 1s ease-in-out forwards;
+@keyframes fadeInCards {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-#home { animation-delay: 0.3s; }
-#info { animation-delay: 0.6s; }
-#services { animation-delay: 0.9s; }
-#contacts { animation-delay: 1.2s; }
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
