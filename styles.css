@@ -1,9 +1,9 @@
 /* Подключение шрифтов из Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap');
 
 /* Общие стили */
 body {
-    font-family: 'Open Sans', sans-serif; /* Современный и удобочитаемый шрифт */
+    font-family: 'Roboto', sans-serif; /* Современный и удобочитаемый шрифт */
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #1a1a1a, #3e4a7e); /* Градиент темный */
@@ -24,9 +24,9 @@ header {
 
 header .logo {
     font-size: 28px;
-    font-family: 'Playfair Display', serif; /* Классический шрифт для логотипа */
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт для логотипа */
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -66,8 +66,8 @@ a:hover {
 .hero h1 {
     font-size: 50px;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Playfair Display', serif; /* Элегантный шрифт для заголовков */
-    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт для заголовков */
+    letter-spacing: 2px;
 }
 
 .hero p {
@@ -108,7 +108,7 @@ a:hover {
     font-size: 36px;
     margin-bottom: 40px;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Playfair Display', serif; /* Элегантный шрифт */
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт */
     letter-spacing: 2px;
 }
 
@@ -136,7 +136,7 @@ a:hover {
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .service-info p {
