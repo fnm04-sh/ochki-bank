@@ -160,33 +160,44 @@ button {
 button:hover {
     background-color: #ff8c00; /* Немного более тёмный оттенок */
     transform: scale(1.1); /* Увеличение кнопки */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для 3D-эффекта */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
 }
 
-/* Эффект при нажатии */
-button:active {
-    transform: scale(1.05); /* Уменьшение при нажатии */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Глубокая тень при нажатии */
+/* Секция с контактами */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px; /* Высота секции */
+    background-color: rgba(0, 0, 0, 0.6); /* Прозрачный черный фон */
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Иконки */
-.icon {
-    font-size: 40px; /* Размер иконки */
-    color: #fff; /* Белый цвет */
-    transition: all 0.3s ease; /* Плавные переходы */
-    cursor: pointer;
+/* Контент секции с контактами */
+.contact-content {
+    text-align: center;
+    color: white;
 }
 
-/* Эффект при наведении на иконку */
-.icon:hover {
-    color: #ffbf00; /* Изменение цвета на золотистый */
-    transform: scale(1.2) rotate(15deg); /* Увеличение и вращение */
+/* Аватарка */
+.avatar {
+    width: 120px; /* Размер аватарки */
+    height: 120px;
+    border-radius: 50%; /* Скругление аватарки */
+    object-fit: cover; /* Обеспечивает правильное обрезание изображения */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
-/* Эффект при нажатии на иконку */
-.icon:active {
-    transform: scale(1.1) rotate(0); /* Уменьшение и сброс вращения */
-    color: #ff8c00; /* Тёмный цвет при нажатии */
+/* Никнейм */
+.nickname {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
 }
 
 /* Подвал */
